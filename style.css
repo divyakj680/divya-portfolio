@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+/* ================= NAVBAR ================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
+nav h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 12px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #00f2fe;
+}
+
+/* ================= SECTIONS ================= */
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+    background: white;
+    margin: 30px auto;
+    border-radius: 15px;
+    width: 85%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease-in;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= HOME ================= */
+
+#home {
+    background: transparent;
+    box-shadow: none;
+    color: white;
+}
+
+#home h1 {
+    font-size: 40px;
+}
+
+#home p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#home img {
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 4px solid white;
+    transition: 0.3s;
+}
+
+#home img:hover {
+    transform: scale(1.05);
+}
+
+/* ================= ABOUT ================= */
+
+.about-img {
+    width: 100%;
+    max-width: 350px;
+    margin: 15px auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* ================= SKILLS ================= */
+
+.skills-box span {
+    display: inline-block;
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    color: white;
+    padding: 10px 18px;
+    margin: 8px;
+    border-radius: 25px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.skills-box span:hover {
+    transform: scale(1.1);
+}
+
+/* ================= PROJECTS ================= */
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project {
+    width: 280px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 15px;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.project img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+/* ================= CONTACT ================= */
+
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #28a745, #00c851);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: darkgreen;
+    cursor: pointer;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    section {
+        width: 95%;
+        padding: 25px;
+    }
+
+    #home h1 {
+        font-size: 28px;
+    }
+
+    #home img {
+        width: 120px;
+    }
+
+    .skills-box span {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .project {
+        width: 100%;
+    }
+}
